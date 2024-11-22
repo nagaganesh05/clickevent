@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events</title>
+</head>
+
+<body>
+
+    <button>click here</button>
+    <button>click</button>
+    <button>button1</button>
+    <button>button2</button>
+
+    <script>
+
+        const btn = document.getElementsByTagName("button")[0];
+        btn.addEventListener("click",()=>{alert("click me")})
+
+
+        const btn1 = document.getElementsByTagName("button")[1]
+        btn1.addEventListener("click",()=>{alert("click here")})
+
+
+        const btn2 = document.getElementsByTagName("button")[2].addEventListener("click",(event)=>console.log(event.srcElement.textContent));
+
+        const btn3 = document.getElementsByTagName("button")[3].addEventListener("click",(event)=>console.log(event.target.textContent));
+    </script>
+</body>
+
+</html>
